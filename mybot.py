@@ -5,19 +5,28 @@ import os
 
 # Load environment variables from .env file
 load_dotenv()
-OPENAI_KEY = os.getenv('OPENAI_KEY')
-DISCORD_TOKEN = os.getenv('TOKEN')
+LLM_KEY = os.getenv('LLM_KEY')
+LLM_URL = os.getenv('LLM_URL', 'https://api.openai.com/v1')
+MODEL_NAME = os.getenv('MODEL_NAME', 'gpt-4o')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
-# Initialize the OpenAI client
-openai_client = OpenAI(api_key=OPENAI_KEY)
+# Initialize the OpenAI client for on-prem LLM
+openai_client = OpenAI(
+    api_key=LLM_KEY,
+    base_url=LLM_URL
+)
 
 def call_openai(question):
     completion = openai_client.chat.completions.create(
-        model="gpt-4o",
+        model=MODEL_NAME,
         messages=[
+            {
+                "role": "system",
+                "content": "You are a helpful assistant that responds like a pirate.",
+            },
              {
                  "role": "user",
-                 "content": f"Respond like a pirate to the following question:  {question}",
+                 "content": f"{question}",
             },
         ]
     )

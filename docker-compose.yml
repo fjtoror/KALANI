@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build: .
+    container_name: mybot
+    restart: unless-stopped
+    environment:
+      - LLM_KEY=${LLM_KEY}
+      - LLM_URL=${LLM_URL}
+      - TOKEN=${TOKEN}
+    # Alternatively, you can use env_file:
+    # env_file:
+    #   - .env
