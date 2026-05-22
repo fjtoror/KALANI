@@ -1,7 +1,7 @@
 # dbot
 Discord bot that answers like a pirate
 
-Workspace control entrypoint: `/Users/sridharmuttumu/Documents/samples/WORKSPACE_INDEX.md`.
+Workspace control entrypoint: `/Users/sridharmuttumu/Documents/workspace/WORKSPACE_INDEX.md`.
 
 ## AI Agent Notes
 

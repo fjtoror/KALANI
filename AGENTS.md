@@ -2,7 +2,7 @@
 
 This repo is an active bot/automation repo. Keep bot code and runtime setup here, and keep personal knowledge or interview notes in `../jobsearchautomation`.
 
-Workspace control entrypoint: `/Users/sridharmuttumu/Documents/samples/WORKSPACE_INDEX.md`.
+Workspace control entrypoint: `/Users/sridharmuttumu/Documents/workspace/WORKSPACE_INDEX.md`.
 
 ## AI Start Here
 
